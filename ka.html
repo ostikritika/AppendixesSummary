@@ -3,155 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <title>Ka Details</title>
-
+<link rel="stylesheet" href="style.css"> <!-- optional external CSS -->
 <style>
 body{
     font-family: Arial, sans-serif;
     background:#f4f6f9;
-    padding:20px;
+    padding:30px;
 }
 
 h2{
     text-align:center;
     color:#2c3e50;
+    margin-bottom:20px;
 }
 
-/* FLOWCHART */
+/* FLOWCHART COLUMN */
 .flowchart{
     display:flex;
     justify-content:center;
-    gap:40px;
-    margin-top:30px;
+    gap:100px;
+    margin-top:20px;
 }
 
 /* COLUMN */
 .column{
-    width:45%;
-}
-
-/* BOX */
-.box{
-    background:#fff;
-    border:2px solid #007bff;
-    border-radius:8px;
-    padding:15px;
-    margin-bottom:15px;
+    width:40%;
     text-align:center;
-    box-shadow:0 4px 8px rgba(0,0,0,0.05);
 }
 
-.ka{
-    border-color:#28a745;
+/* BOXES */
+.box{
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.08);
 }
 
-.kha{
-    border-color:#ff9800;
+/* COLORS */
+.top-box{
+    background:#ffffff;
+    border:2px solid #555;
 }
 
+.ward-box{
+    background:#e8f5e9;
+    border:2px solid #4caf50;
+}
+
+.dept-box{
+    background:#e3f2fd;
+    border:2px solid #2196f3;
+}
+
+.inner-box{
+    background:#fffde7;
+    border:1px solid #fbc02d;
+}
+
+/* TEXT */
 .appendix-no{
     font-weight:bold;
     font-size:14px;
-    color:#555;
 }
 
 .title{
     font-size:16px;
     font-weight:bold;
-    margin-top:5px;
+    margin-top:6px;
 }
 
 .desc{
     font-size:14px;
     color:#555;
-    margin-top:5px;
 }
 
-/* CLICKABLE TEXT */
-.clickable{
-    color:#007bff;
-    cursor:pointer;
-}
-
-.clickable:hover{
-    text-decoration:underline;
-}
-
-/* DEPARTMENT LIST */
-.department-list{
-    display:none;
-    margin-top:15px;
-}
-
-.small-box{
-    background:#f9fafc;
-    border:1px solid #ccc;
-    border-radius:6px;
-    padding:8px;
+/* DOWN ARROWS */
+.arrow{
+    font-size:28px;
+    color:#555;
     margin:6px 0;
-    font-size:14px;
+}
+
+/* CLICKABLE */
+.small-box a{
+    color:#0d47a1;
+    text-decoration:none;
+}
+.small-box a:hover{
+    text-decoration:underline;
 }
 </style>
 </head>
-
 <body>
 
 <h2>बजेट तथा कार्यक्रम (Allocated budget : 25,114,341,000)</h2>
 <h2>क (Ka) – Details</h2>
 
+<!-- Top box -->
+<div style="width:280px; margin:0 auto; text-align:center;">
+    <div class="box top-box">
+        <div class="appendix-no">क (Ka)</div>
+        <div class="title">Ward & Department Allocation</div>
+    </div>
+</div>
+
+<!-- Arrows -->
+<div style="display:flex; justify-content:center; gap:200px; margin-top:10px;">
+    <div class="arrow">↓</div>
+    <div class="arrow">↓</div>
+</div>
+
 <div class="flowchart">
 
-<!-- WARD COLUMN -->
+<!-- Ward column -->
 <div class="column">
-    <div class="box ka">
+    <div class="box ward-box">
         <div class="appendix-no">Ward</div>
         <div class="title">१–३२ वडा</div>
     </div>
 
-    <div class="box">
+    <div class="arrow">↓</div>
+
+    <div class="box inner-box">
         <div class="title">Types of Wards</div>
-        <div class="desc">ठूला वडाहरू, मझौला वडाहरू, साना वडाहरू</div>
+        <ul class="desc" style="text-align:left; padding-left:20px;">
+            <li>ठूला वडा</li>
+            <li>मझौला वडा</li>
+            <li>साना वडा</li>
+        </ul>
     </div>
 </div>
 
-<!-- DEPARTMENT COLUMN -->
+<!-- Department column -->
 <div class="column">
-    <div class="box kha">
+    <div class="box dept-box">
         <div class="appendix-no">Department / Units</div>
         <div class="title">विभाग / एकाइ</div>
     </div>
 
-    <div class="box">
-        <div class="title clickable" onclick="toggleDepartments()">
-            Click here to see different departments and units
-        </div>
+    <div class="arrow">↓</div>
 
-        <div class="department-list" id="departments">
-            <div class="small-box">16 Departments</div>
-            <div class="small-box">1 Secretariat (International Relation Secretariat)</div>
-            <div class="small-box">1 Kathmandu Metropolitan Police</div>
-            <div class="small-box">1 Commission (Urban Planning Commission)</div>
-            <div class="small-box">
-                4 Units:
-                <br>• Internal Audit Unit
-                <br>• Procurement Unit
-                <br>• Planning Monitoring & Evaluation Unit
-                <br>• Public Private Partnership Unit
-            </div>
-            <div class="small-box">
-                Hanumandhoka Palace Conservation Program
-            </div>
+    <div class="box inner-box">
+        <!-- 16 Departments clickable -->
+        <div class="small-box">
+            <a href="dept_name.html">16 Departments (Click to see names)</a>
+        </div>
+        <!-- Other units -->
+        <div class="small-box">1 Secretariat (International Relation Secretariat)</div>
+        <div class="small-box">1 Kathmandu Metropolitan Police</div>
+        <div class="small-box">1 Urban Planning Commission</div>
+        <div class="small-box">
+            4 Units:
+            <br>• Internal Audit
+            <br>• Procurement
+            <br>• Planning Monitoring & Evaluation
+            <br>• Public Private Partnership Unit
         </div>
     </div>
 </div>
+program have flield like so...
+<table border="1" width="100%">
+    <tr>
+        <td>bibhag</td>
+        <td>chetra</td>
+        <td>upa chetra</td>
+        <td>mukhye karyekram</td>
+        <td>program</td>
+        <td>kharcha sanket</td>
+    </tr>
+</table>
 
+.
+
+<!-- Back to Index -->
+<div style="text-align:center; margin-top:30px;">
+    <a href="index.html" style="text-decoration:none; color:#0d47a1;">← Back to Home</a>
 </div>
-
-<script>
-function toggleDepartments(){
-    const dep = document.getElementById("departments");
-    dep.style.display = dep.style.display === "none" ? "block" : "none";
-}
-</script>
 
 </body>
 </html>

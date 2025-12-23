@@ -3,29 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <title>Kha Details</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    padding:40px;
+}
+
+/* MAIN COLUMN */
+.column{
+    position:relative;
+    text-align:center;
+}
+
+/* BOXES */
+.box{
+    background:#fff;
+    border-radius:8px;
+    padding:12px;
+    box-shadow:0 3px 6px rgba(0,0,0,0.08);
+    font-weight:bold;
+}
+
+/* COLORS */
+.top-box{
+    width:260px;
+    margin:0 auto;
+    border:2px solid #ff9800;
+    background:#fff3e0;
+}
+
+.left-box{
+    width:240px;
+    border:2px solid #4caf50;
+    background:#e8f5e9;
+}
+
+.right-box{
+    width:240px;
+    border:2px solid #2196f3;
+    background:#e3f2fd;
+}
+
+/* ARROW SVG */
+.arrow-svg{
+    width:600px;
+    height:90px;
+    margin:10px auto 0;
+    display:block;
+}
+</style>
 </head>
 
 <body>
-	<!-- KHA COLUMN -->
+
 <div class="column">
 
-<div class="box kha">
-    <div class="appendix-no">ख (Kha)</div>
-    <div class="title">बाह्यतर्फको अनुमानित व्यय (Allocated Budget :650000000)</div>
-</div>
-
-<div style="display:flex; gap:20px; justify-content:center; margin-top:10px;">
-    <div class="box no-line" style="width:160px;">
-        <div class="title">जग्गा एकीकरण आयोजनाबाट सञ्चालन हुने कार्यक्रम</div>
+    <!-- TOP SMALL BOX -->
+    <div class="box top-box">
+        ख (Kha)<br>
+        बाह्यतर्फको अनुमानित व्यय<br>
+        (Budget : 650,000,000)
     </div>
 
-    <div class="box no-line" style="width:160px;">
-        <div class="title">अन्य निकायहरुबाट प्राप्त हुने कार्यक्रम</div>
+    <!-- CLEAN ANGULAR ARROWS -->
+    <svg class="arrow-svg" viewBox="0 0 600 90">
+        <!-- Left Arrow -->
+        <line x1="300" y1="0" x2="150" y2="70"
+              stroke="#555" stroke-width="2"/>
+        <polygon points="145,68 155,68 150,78" fill="#555"/>
+
+        <!-- Right Arrow -->
+        <line x1="300" y1="0" x2="450" y2="70"
+              stroke="#555" stroke-width="2"/>
+        <polygon points="445,68 455,68 450,78" fill="#555"/>
+    </svg>
+
+    <!-- BOTTOM BOXES -->
+    <div style="display:flex; justify-content:center; gap:80px; margin-top:-10px;">
+        <div class="box left-box">
+            जग्गा एकीकरण आयोजनाबाट<br>
+            सञ्चालन हुने कार्यक्रम
+            <br> (Budget :400,000,000)
+        </div>
+
+        <div class="box right-box">
+            अन्य निकायहरुबाट<br>
+            प्राप्त हुने कार्यक्रम
+                <br>(Budget :250,000,000)
+        </div>
     </div>
-</div>
 
 </div>
 
-</div>
 </body>
+</html>

@@ -3,206 +3,309 @@
 <head>
 <meta charset="UTF-8">
 <title>Appendixes Flowchart</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    padding: 30px;
+    color: #333;
+}
 
-<!-- CSS FILE LINK -->
-<link rel="stylesheet" href="style.css">
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
 
+/* FLOWCHART CONTAINER */
+.flowchart {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
 
+/* COLUMN */
+.column {
+    width: 45%;
+    text-align: center;
+}
+
+/* BOXES */
+.box {
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* COLORS */
+.ka {
+    border-left: 5px solid #4caf50;
+    background: #e8f5e9;
+}
+
+.kha {
+    border-left: 5px solid #2196f3;
+    background: #e3f2fd;
+}
+
+.appendix-box {
+    border-left: 5px solid #ff9800;
+    background: #fff3e0;
+}
+
+/* TEXT */
+.appendix-no {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.title u {
+    color: #0d47a1;
+}
+
+.desc {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ARROWS */
+.arrow-down {
+    text-align: center;
+    font-size: 24px;
+    margin: -5px 0 10px 0;
+    color: #555;
+}
+
+/* FLEX BOX FOR KHA SUB BOXES */
+.flex-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-box .box {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* LINK STYLING */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
 </head>
-
 <body>
 
 <h2>Appendixes Flowchart</h2>
 
 <div class="flowchart">
 
-<!-- KA COLUMN -->
-<div class="column">
+    <!-- KA COLUMN -->
+    <div class="column">
+        <div class="box ka">
+            <a href="ka.html" style="color:inherit;">
+                <div class="appendix-no">क (Ka)</div>
+                <div class="title"><u>बजेट तथा कार्यक्रम (Allocated budget :25,114,341,000)</u></div>
+            </a>
+        </div>
 
-<div class="box ka">
-      <!--  <a href="ka.html" style="text-decoration:none; color:inherit;"> -->
-        <a href="ka.html" class="ka-link">
+        <div class="arrow-down">↓</div>
 
-    <div class="appendix-no">क (Ka)</div>
-    <div class="title">बजेट तथा कार्यक्रम (Allocated budget :25114341000)</div>
-</div>
+        <!-- ALL APPENDIX BOXES PRESERVED -->
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 1</div>
+            <div class="title">१ देखि ३२ नं वडा कार्यालयहरुका लागि वार्षिक प्रशासनिक बजेट व्यवस्था</div>
+            <div class="desc">Admin expenses allocated for different wards</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 1</div>
-    <div class="title">१ देखि ३२ नं वडा कार्यालयहरुका लागि वार्षिक प्रशासनिक बजेट व्यवस्था</div>
-    <div class="desc">Admin expenses allocated for different wards</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 2</div>
+            <div class="title">१ देखि ३२ नं वडा कार्यालयहरुका लागि वार्षिक पूर्वाधार विकास बजेट व्यवस्था</div>
+            <div class="desc">Physical infrastructure development expenses</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 2</div>
-    <div class="title">१ देखि ३२ नं वडा कार्यालयहरुका लागि वार्षिक पूर्वाधार विकास बजेट व्यवस्था</div>
-    <div class="desc">Physical infrastructure development expenses</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 3</div>
+            <div class="title">१ देखि ३२ नं वडा कार्यालयहरुको वार्षिक अन्य सामाजिक कार्यको व्यवस्था</div>
+            <div class="desc">Social development expenses</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 3</div>
-    <div class="title">१ देखि ३२ नं वडा कार्यालयहरुको वार्षिक अन्य सामाजिक कार्यको व्यवस्था</div>
-    <div class="desc">Social development expenses</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 4</div>
+            <div class="title">गौरवका योजनाहरु</div>
+            <div class="desc">11 Programs, N Activities (Budget: 1,990,700,000)</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 4</div>
-    <div class="title">गौरवका योजनाहरु</div>
-    <div class="desc">11 Programs, N Activities (Budget: 1,990,700,000)</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 4.क</div>
+            <div class="title">गौरव क्रमागत योजनाहरु</div>
+            <div class="desc">10 Programs, N Activities (Budget: 3,090,908,000)</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 4.क</div>
-    <div class="title">गौरव क्रमागत योजनाहरु</div>
-    <div class="desc">10 Programs, N Activities (Budget: 3,090,908,000)</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 5</div>
+            <div class="title">स्वर्णिम योजनाहरु</div>
+            <div class="desc">30 Programs</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 5</div>
-    <div class="title">स्वर्णिम योजनाहरु</div>
-    <div class="desc">30 Programs</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 5.क</div>
+            <div class="title">स्वर्णिम क्रमागत योजनाहरु</div>
+            <div class="desc">7 Programs</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 5.क</div>
-    <div class="title">स्वर्णिम क्रमागत योजनाहरु</div>
-    <div class="desc">7 Programs</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 6</div>
+            <div class="title">सार्वजनिक निर्माण तर्फका क्रमागत योजनाहरु</div>
+            <div class="desc">110 Activities</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 6</div>
-    <div class="title">सार्वजनिक निर्माण तर्फका क्रमागत योजनाहरु</div>
-    <div class="desc">110 Activities</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 7</div>
+            <div class="title">सम्पदा तथा पर्यटन तर्फका क्रमागत योजनाहरु</div>
+            <div class="desc">84 Activities</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 7</div>
-    <div class="title">सम्पदा तथा पर्यटन तर्फका क्रमागत योजनाहरु</div>
-    <div class="desc">84 Activities</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 8</div>
+            <div class="title">शिक्षा तर्फका क्रमागत योजनाहरु</div>
+            <div class="desc">14 Activities</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 8</div>
-    <div class="title">शिक्षा तर्फका क्रमागत योजनाहरु</div>
-    <div class="desc">14 Activities</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 9</div>
+            <div class="title">वातावरण व्यवस्थापन तर्फका क्रमागत योजनाहरु</div>
+            <div class="desc">41 Activities</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 9</div>
-    <div class="title">वातावरण व्यवस्थापन तर्फका क्रमागत योजनाहरु</div>
-    <div class="desc">41 Activities</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 10</div>
+            <div class="title">अन्तर सरकारी वित्तीय हस्तान्तरण (ससर्त अनुदान सङ्घीय)</div>
+            <div class="desc">Current: 115 Activities, Fixed: 34 Activities</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 10</div>
-    <div class="title">अन्तर सरकारी वित्तीय हस्तान्तरण (ससर्त अनुदान सङ्घीय)</div>
-    <div class="desc">Current: 115 Activities, Fixed: 34 Activities</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 11</div>
+            <div class="title">प्रदेश सरकार (बागमती) बाट प्राप्त अनुदान</div>
+            <div class="desc">Current: 6, Fixed: 10</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 11</div>
-    <div class="title">प्रदेश सरकार (बागमती) बाट प्राप्त अनुदान</div>
-    <div class="desc">Current: 6, Fixed: 10</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 12</div>
+            <div class="title">हनुमानढोका दरबार संरक्षण कार्यक्रम</div>
+            <div class="desc">Probabilities of income and expenses</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 12</div>
-    <div class="title">हनुमानढोका दरबार संरक्षण कार्यक्रम</div>
-    <div class="desc">Probabilities of income and expenses</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 13</div>
+            <div class="title">मुर्त सम्पदा संरक्षण सम्बन्धी DPR कार्यान्वयन योजना</div>
+            <div class="desc">29 Programs</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 13</div>
-    <div class="title">मुर्त सम्पदा संरक्षण सम्बन्धी DPR कार्यान्वयन योजना</div>
-    <div class="desc">29 Programs</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 14</div>
+            <div class="title">मुर्त सम्पदा संरक्षण सम्बन्धी DPR तयारी योजना</div>
+            <div class="desc">Preparation Phase</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 14</div>
-    <div class="title">मुर्त सम्पदा संरक्षण सम्बन्धी DPR तयारी योजना</div>
-    <div class="desc">Preparation Phase</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 15</div>
+            <div class="title">स्थानीय जात्रा पर्व तथा परम्परागत पूजा संचालन खर्च</div>
+            <div class="desc">26 Activities</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 15</div>
-    <div class="title">स्थानीय जात्रा पर्व तथा परम्परागत पूजा संचालन खर्च</div>
-    <div class="desc">26 Activities</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 16</div>
+            <div class="title">परम्परागत एवं मौलिक बाजा तथा प्रशिक्षण सहयोग</div>
+            <div class="desc">10 Activities</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 16</div>
-    <div class="title">परम्परागत एवं मौलिक बाजा तथा प्रशिक्षण सहयोग</div>
-    <div class="desc">10 Activities</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 17</div>
+            <div class="title">गुठी, बाजा खलः, भजन खलः संरक्षण</div>
+            <div class="desc">4 Activities</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 17</div>
-    <div class="title">गुठी, बाजा खलः, भजन खलः संरक्षण</div>
-    <div class="desc">4 Activities</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 18</div>
+            <div class="title">विभिन्न अमूर्त सम्पदा संरक्षण</div>
+            <div class="desc">31 Activities</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 18</div>
-    <div class="title">विभिन्न अमूर्त सम्पदा संरक्षण</div>
-    <div class="desc">31 Activities</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 19</div>
+            <div class="title">पर्यटन प्रवर्धन कार्यक्रम सहयोग</div>
+            <div class="desc">12 Activities</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 19</div>
-    <div class="title">पर्यटन प्रवर्धन कार्यक्रम सहयोग</div>
-    <div class="desc">12 Activities</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 20</div>
+            <div class="title">विद्युतीय हाजिरी खरिद तथा जडानका लागि अनुदान विवरण</div>
+            <div class="desc">68 Schools</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 20</div>
-    <div class="title">विद्युतीय हाजिरी खरिद तथा जडानका लागि अनुदान विवरण</div>
-    <div class="desc">68 Schools</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 21</div>
+            <div class="title">डेस्क बेन्च खरिदका लागि सामुदायिक विद्यालयलाई अनुदान विवरण</div>
+            <div class="desc">78 Schools</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 21</div>
-    <div class="title">डेस्क बेन्च खरिदका लागि सामुदायिक विद्यालयलाई अनुदान विवरण</div>
-    <div class="desc">78 Schools</div>
-</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 22</div>
+            <div class="title">स्मार्ट बोर्ड खरिदका लागि सामुदायिक विद्यालयलाई अनुदान विवरण</div>
+            <div class="desc">79 Schools</div>
+        </div>
 
-<div class="box">
-    <div class="appendix-no">Appendix 22</div>
-    <div class="title">स्मार्ट बोर्ड खरिदका लागि सामुदायिक विद्यालयलाई अनुदान विवरण</div>
-    <div class="desc">79 Schools</div>
-</div>
-
-<div class="box">
-    <div class="appendix-no">Appendix 23</div>
-    <div class="title">विद्यालय नर्स कार्यक्रम अनुदान विवरण</div>
-    <div class="desc">30 Schools</div>
-</div>
-
-</div>
-
-<!-- <!-- KHA COLUMN -->
-<div class="column">
-
-<div class="box kha">
-    <a href="kha.html" style="text-decoration:none; color:inherit;">
-    <div class="appendix-no">ख (Kha)</div>
-    <div class="title">बाह्यतर्फको अनुमानित व्यय (Allocated Budget :650000000)</div>
-</div>
-
-<!-- <div style="display:flex; gap:20px; justify-content:center; margin-top:10px;">
-    <div class="box no-line" style="width:160px;">
-        <div class="title">जग्गा एकीकरण आयोजनाबाट सञ्चालन हुने कार्यक्रम</div>
+        <div class="box appendix-box">
+            <div class="appendix-no">Appendix 23</div>
+            <div class="title">विद्यालय नर्स कार्यक्रम अनुदान विवरण</div>
+            <div class="desc">30 Schools</div>
+        </div>
     </div>
 
-    <div class="box no-line" style="width:160px;">
-        <div class="title">अन्य निकायहरुबाट प्राप्त हुने कार्यक्रम</div>
-    </div> -->
-</div>
+    <!-- KHA COLUMN -->
+    <div class="column">
+        <div class="box kha">
+            <a href="kha.html" style="color:inherit;">
+                <div class="appendix-no">ख (Kha)</div>
+                <div class="title">बाह्यतर्फको अनुमानित व्यय (Allocated Budget :650,000,000)</div>
+            </a>
+        </div>
+
+        <div class="arrow-down">↓</div>
+
+        <div class="flex-box">
+            <div class="box appendix-box">
+                <div class="title">जग्गा एकीकरण आयोजनाबाट सञ्चालन हुने कार्यक्रम</div>
+            </div>
+
+            <div class="box appendix-box">
+                <div class="title">अन्य निकायहरुबाट प्राप्त हुने कार्यक्रम</div>
+            </div>
+        </div>
+    </div>
 
 </div>
-
-</div> -->
-
-<!-- JS FILE LINK -->
-<script src="script.js"></script>
 </body>
 </html>
